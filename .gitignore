@@ -1,7 +1,11 @@
-target
-tomcat.8080
-tomcat.5000
-
-# IntelliJ Idea project files
-.idea
+target/
+.env
+.idea/
 *.iml
+.classpath
+.project
+.settings/
+docs/tmp/
+docs/java-getting-started/
+docs/deploying-spring-boot-apps/
+.mvn/wrapper/maven-wrapper.jar

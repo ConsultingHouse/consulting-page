@@ -1,20 +1,40 @@
+# java-getting-started
 
-# FTT WebApi Development
+A barebones Java app, which can easily be deployed to Heroku.
 
-Projeto construido usando a linguagem JAVA para criar APIs, hospedado na plataforma Heroku, usando o CRM Salesforce como banco de dados.
+This application supports the [Getting Started with Java on Heroku](https://devcenter.heroku.com/articles/getting-started-with-java) article - check it out.
 
-Tema: Car Shop
- Gabriel Teixeira 081170023
- Igor Cruz 081170008
- Joao Marcos 081170036
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-## Application Documentation
+## Running Locally
 
-Postman Collection
-    - https://www.getpostman.com/collections/2b31a9de2b0f7e5ccbdb
+Make sure you have Java and Maven installed.  Also, install the [Heroku CLI](https://cli.heroku.com/).
 
-Heroku Git:
-     - https://git.heroku.com/car-shop-ftt.git
-    
-GitHub:
-     - https://github.com/Gteixeirinha7/car-shop.git
+```sh
+$ git clone https://github.com/heroku/java-getting-started.git
+$ cd java-getting-started
+$ mvn install
+$ heroku local:start
+```
+
+Your app should now be running on [localhost:5000](http://localhost:5000/).
+
+If you're going to use a database, ensure you have a local `.env` file that reads something like this:
+
+```
+JDBC_DATABASE_URL=jdbc:postgresql://localhost:5432/java_database_name
+```
+
+## Deploying to Heroku
+
+```sh
+$ heroku create
+$ git push heroku master
+$ heroku open
+```
+
+## Documentation
+
+For more information about using Java on Heroku, see these Dev Center articles:
+
+- [Java on Heroku](https://devcenter.heroku.com/categories/java)
