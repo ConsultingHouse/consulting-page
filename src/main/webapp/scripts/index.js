@@ -27,7 +27,9 @@ app.controller('ItemController', ['$scope', '$http', function (scope, $http) {
         );
     };
     c.handleGET = function (response) {
-        c.url = response.objectData.urlLogin;
+        c.url = response.data.objectData.urlLogin;
+        document.getElementById('myIframe').src = c.url;
+
     };
     c.init = function () {
         c.callPageGet();
