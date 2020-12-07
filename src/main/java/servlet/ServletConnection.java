@@ -20,6 +20,8 @@ public class ServletConnection extends APIHandler {
 
     @Override
     public JSONObject executeGET(JSONObject inputData) throws AppException, SQLException {
+        
+        JSONObject returnData = new JSONObject();
         if(inputData.get("Key") == System.getenv("KEYMD5")){
             JSONObject returnInternalData = new JSONObject();
             String urlVar = System.getenv("URL")+
@@ -30,7 +32,6 @@ public class ServletConnection extends APIHandler {
             returnInternalData.put("urlLogin", urlVar);            
             returnData.put("objectData", returnInternalData);
         }
-        JSONObject returnData = new JSONObject();
         returnData.put("statusCode", "200");
         return returnData;
     }
