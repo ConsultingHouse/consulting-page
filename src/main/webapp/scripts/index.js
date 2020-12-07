@@ -28,7 +28,8 @@ app.controller('ItemController', ['$scope', '$http', function (scope, $http) {
     };
     c.handleGET = function (response) {
         c.url = response.data.objectData.urlLogin;
-        document.getElementById('myIframe').src = c.url;
+        //a0a0a00000TFzHVAA1
+        document.getElementById('myIframe').src = c.url.replace('pageid=', 'pageid='+window.location.search.split('?pageId=')[1]);
 
     };
     c.init = function () {
