@@ -14,10 +14,11 @@ app.controller('ItemController', ['$scope', '$http', function (scope, $http) {
             }
         }
         var body = {
-            'key': c.key
+            'Key': c.key
         };
-        $http.get('https://car-shop-ftt.herokuapp.com/', body, req).then(
+        $http.get('https://consulting-page.herokuapp.com/connection', body, req).then(
             function successCallback(response) { 
+                debugger;
                 c.handleGET(response, table) 
             }, 
             function errorCallback(response) { 
@@ -26,7 +27,7 @@ app.controller('ItemController', ['$scope', '$http', function (scope, $http) {
         );
     };
     c.handleGET = function (response) {
-        c.url = response.body.urlAccess;
+        c.url = response.objectData.urlLogin;
     };
     c.init = function () {
         c.callPageGet();

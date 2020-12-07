@@ -18,8 +18,8 @@
             <div></div>
         </div>
     </div>
-    <div id="contentData" style="margin: 5px;">
-        <iframe src="c.url" style="height:200px;width:300px;margin:0px" ></iframe>
+    <div id="contentData" style="margin: 0px;">
+        <iframe src="c.url" style="height:100%;width:100%;margin:0px" ></iframe>
     </div>
 </body>
 </html>
