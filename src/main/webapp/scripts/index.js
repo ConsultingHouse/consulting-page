@@ -19,7 +19,7 @@ app.controller('ItemController', ['$scope', '$http', function (scope, $http) {
         $http.get('https://consulting-page.herokuapp.com/connection', body, req).then(
             function successCallback(response) { 
                 debugger;
-                c.handleGET(response, table) 
+                c.handleGET(response);
             }, 
             function errorCallback(response) { 
                 console.log(response); 
