@@ -65,7 +65,9 @@ public class APIHandler extends HttpServlet {
         setAccessControlHeaders(response);
         try {
             this.conn = new AppConnection();
+            System.out.println(request);
             JSONObject inputData = checkGetParams(AppUtils.parseRequest(request), request);
+            System.out.println(inputData);
             try {
                 response.getWriter().append(executeGET(inputData).toString());
             } catch (SQLException e) {
