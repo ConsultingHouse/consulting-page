@@ -3,6 +3,8 @@ var app = angular.module('app', []);
 
 app.controller('ItemController', ['$scope', '$http', function (scope, $http) {
     var c = this;
+    c.key = '';
+    c.url = '';
 
     c.callPageGet = function () {
         var req = {
@@ -11,9 +13,11 @@ app.controller('ItemController', ['$scope', '$http', function (scope, $http) {
                 'Content-Type': 'application/json'
             }
         }
+        var body = {
+            'Key': c.key
+        };
         $http.get('https://consulting-page.herokuapp.com/connection', body, req).then(
             function successCallback(response) { 
-                debugger;
                 c.handleGET(response);
             }, 
             function errorCallback(response) { 
@@ -22,7 +26,9 @@ app.controller('ItemController', ['$scope', '$http', function (scope, $http) {
         );
     };
     c.handleGET = function (response) {
-        document.getElementById('myIframe').src = response.data.objectData.urlLogin.replace('pageid=', 'pageid='+window.location.search.split('?pageId=')[1]);
+        c.url = response.data.objectData.urlLogin;
+        //a0a0a00000TFzHVAA1
+        document.getElementById('myIframe').src = c.url.replace('pageid=', 'pageid='+window.location.search.split('?pageId=')[1]);
 
     };
     c.init = function () {
