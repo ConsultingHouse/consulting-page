@@ -22,6 +22,8 @@ public class ServletConnection extends APIHandler {
     public JSONObject executeGET(JSONObject inputData) throws AppException, SQLException {
         
         JSONObject returnData = new JSONObject();
+        System.out.println(inputData.get("Key"));
+        System.out.println( System.getenv("KEYMD5"));
         if(inputData.get("Key") == System.getenv("KEYMD5")){
             JSONObject returnInternalData = new JSONObject();
             String urlVar = System.getenv("URL")+
