@@ -22,9 +22,7 @@ public class ServletConnection extends APIHandler {
     public JSONObject executeGET(JSONObject inputData) throws AppException, SQLException {
         
         JSONObject returnData = new JSONObject();
-        System.out.println(inputData.get("Key"));
-        System.out.println( System.getenv("KEYMD5"));
-        if(inputData.get("Key") == System.getenv("KEYMD5")){
+        // if(inputData.get("Key") == System.getenv("KEYMD5")){
             JSONObject returnInternalData = new JSONObject();
             String urlVar = System.getenv("URL")+
                             "?un="+System.getenv("Username")+
@@ -33,7 +31,7 @@ public class ServletConnection extends APIHandler {
             
             returnInternalData.put("urlLogin", urlVar);            
             returnData.put("objectData", returnInternalData);
-        }
+        // }
         returnData.put("statusCode", "200");
         return returnData;
     }
