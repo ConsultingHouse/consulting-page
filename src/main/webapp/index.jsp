@@ -19,7 +19,7 @@
         </div>
     </div>
     <div id="contentData" style="margin: 0px;">
-        <iframe id="myIframe" style="height:100%;width:100%;margin:0px" width="" height="" sandbox="allow-popup" name="main" ></iframe>
+        <iframe id="myIframe" style="height:100%;width:100%;margin:0px" ></iframe>
     </div>
 </body>
 </html>
