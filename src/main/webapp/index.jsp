@@ -13,6 +13,7 @@
     </script>
 </head>
 <body class="app {{containerClass}}" ng-controller="ItemController as c" ng-init="c.init()">
+    T
     <div class="lds-css ng-scope loading" ng-if="c.loading == true" ng-model="c.loading">
         <div class="lds-rolling">
             <div></div>
