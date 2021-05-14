@@ -5,7 +5,6 @@
     "$http",
     function (scope, $http) {
       var c = this;
-      c.htmlUrl = 'T';
       c.callPageGet = function () {
         $http
           .get(
@@ -23,19 +22,34 @@
           );
       };
       c.handleGET = function (response) {
-        c.htmlUrl = response.data.objectData.urlLogin.replace(
+        if (c.isIOS()){
+          document.getElementById("myIframe").src =
+            response.data.objectData.urlLogin.replace(
+              "%3Fpageid=",
+              encodeURIComponent(window.location.search)
+            );
+        }else{
+          window.location.href = response.data.objectData.urlLogin.replace(
             "%3Fpageid=",
             encodeURIComponent(window.location.search)
           );
-        document.getElementById("myIframe").src =
-          response.data.objectData.urlLogin.replace(
-            "%3Fpageid=",
-            encodeURIComponent(window.location.search)
-          );
+        }
       };
       c.init = function () {
         c.callPageGet();
       };
+      c.isIOS = function() {
+        return [
+          'iPad Simulator',
+          'iPhone Simulator',
+          'iPod Simulator',
+          'iPad',
+          'iPhone',
+          'iPod'
+        ].includes(navigator.platform)
+        // iPad on iOS 13 detection
+        || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+      }
     },
   ]);
   app.config([
