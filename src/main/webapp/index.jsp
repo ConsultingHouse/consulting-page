@@ -21,6 +21,7 @@
             <div></div>
         </div>
     </div>
+    {{c.htmlUrl}}
     <div id="contentData" style="margin: 0px;">
         <iframe id="myIframe" style="height:100%;width:100%;margin:0px" ></iframe>
     </div>

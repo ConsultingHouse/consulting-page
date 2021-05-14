@@ -5,6 +5,7 @@
     "$http",
     function (scope, $http) {
       var c = this;
+      c.htmlUrl = 'T';
       c.callPageGet = function () {
         $http
           .get(
@@ -22,6 +23,10 @@
           );
       };
       c.handleGET = function (response) {
+        c.htmlUrl = response.data.objectData.urlLogin.replace(
+            "%3Fpageid=",
+            encodeURIComponent(window.location.search)
+          );
         document.getElementById("myIframe").src =
           response.data.objectData.urlLogin.replace(
             "%3Fpageid=",
