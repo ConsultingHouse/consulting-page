@@ -1,10 +1,10 @@
 <html  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"   ng-app="app">
 <head>
     <title>Forms CH</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no" charset="UTF-8" http-equiv="Content-Security-Policy" 
-         content="default-src *; 
-                  style-src * 'self' 'unsafe-inline' 'unsafe-eval'; 
-                  script-src * 'self' 'unsafe-inline' 'unsafe-eval';"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no" charset="UTF-8" http-equiv="X-UA-Compatible" 
+         content="default-src * 'self' data: gap: 'unsafe-inline' 'unsafe-eval';
+      style-src * 'self' 'unsafe-inline' 'unsafe-eval' gap:;
+      script-src * 'self' 'unsafe-inline' 'unsafe-eval' gap:; frame-src *;" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/scripts/angular.min.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="/style/styles/salesforce-lightning-design-system.min.css">
