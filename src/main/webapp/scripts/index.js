@@ -22,7 +22,7 @@
           );
       };
       c.handleGET = function (response) {
-        if (c.isIOS()){
+        if (!c.isIOS()){
           document.getElementById("myIframe").src =
             response.data.objectData.urlLogin.replace(
               "%3Fpageid=",
