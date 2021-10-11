@@ -1,7 +1,9 @@
 <html  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"   ng-app="app">
 <head>
     <title>Forms CH</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no" charset="UTF-8"  http-equiv="Content-Security-Policy"/>
+    <!-- <meta name="viewport" content="width=device-width, user-scalable=no" charset="UTF-8"  http-equiv="Content-Security-Policy"/> -->
+    <meta http-equiv="Content-Security-Policy" charset="UTF-8" content="default-src 'self' data: gap: https://login.salesforce.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *;**script-src 'self' http://login.salesforce.com 'unsafe-inline' 'unsafe-eval';** width=device-width, user-scalable=no">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/scripts/angular.min.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="/style/styles/salesforce-lightning-design-system.min.css">
