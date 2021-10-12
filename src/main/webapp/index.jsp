@@ -2,7 +2,7 @@
 <head>
     <title>Forms CH</title>
     <!-- <meta name="viewport" content="width=device-width, user-scalable=no" charset="UTF-8"  http-equiv="Content-Security-Policy"/> -->
-    <meta http-equiv="Content-Security-Policy" content="child-src https://*.salesforce.com 'unsafe-eval'; default-src 'self' data: gap: https://*.salesforce.com 'unsafe-eval';  style-src * self 'unsafe-inline' blob: data: gap: https://*.salesforce.com 'unsafe-inline'; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap: https://*.salesforce.com https://*.documentforce.com; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src https://*.salesforce.com 'unsafe-eval'; base-uri * self 'unsafe-inline' blob: data: gap:;">
+    <meta http-equiv="Content-Security-Policy" content="child-src https://*.salesforce.com https://*.documentforce.com 'unsafe-eval'; default-src 'self' data: gap: https://*.salesforce.com https://*.documentforce.com 'unsafe-eval';  style-src * self 'unsafe-inline' blob: data: gap: https://*.salesforce.com https://*.documentforce.com 'unsafe-inline'; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap: https://*.salesforce.com https://*.documentforce.com https://*.documentforce.com; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src https://*.salesforce.com https://*.documentforce.com 'unsafe-eval'; base-uri * self 'unsafe-inline' blob: data: gap:;">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/scripts/angular.min.js" type="text/javascript"></script>
