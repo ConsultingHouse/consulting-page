@@ -2,7 +2,7 @@
 <head>
     <title>Forms CH</title>
     <!-- <meta name="viewport" content="width=device-width, user-scalable=no" charset="UTF-8"  http-equiv="Content-Security-Policy"/> -->
-    <meta http-equiv="Content-Security-Policy" content="child-src http://* https://* 'unsafe-inline' 'unsafe-eval'; default-src http://* https://* 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; script-src 'self' http://* https://* 'unsafe-inline' 'unsafe-eval'; ">
+    <meta http-equiv="Content-Security-Policy" content="child-src * self blob: data: gap:;default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;base-uri * self 'unsafe-inline' blob: data: gap:;">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/scripts/angular.min.js" type="text/javascript"></script>
