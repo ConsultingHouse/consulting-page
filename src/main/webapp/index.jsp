@@ -2,7 +2,7 @@
 <head>
     <title>Forms CH</title>
     <!-- <meta name="viewport" content="width=device-width, user-scalable=no" charset="UTF-8"  http-equiv="Content-Security-Policy"/> -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *;**script-src 'self' http://*.salesforce.com 'unsafe-inline' 'unsafe-eval';** ">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://*.salesforce.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *;**script-src 'self' https://*.salesforce.com 'unsafe-inline' 'unsafe-eval';** ">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/scripts/angular.min.js" type="text/javascript"></script>
