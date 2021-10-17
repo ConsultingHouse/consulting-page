@@ -29,6 +29,7 @@
               encodeURIComponent(window.location.search)
             );
         }else{*/
+          debugger;
           window.location.href = response.data.objectData.urlLogin.replace(
             "%3Fpageid=",
             encodeURIComponent(window.location.search)
