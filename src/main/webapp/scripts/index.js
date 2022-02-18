@@ -15,7 +15,9 @@
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
-                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Origin": "https://consulting-page.herokuapp.com",
+                "Access-Control-Allow-Credentials": true,
+                "Access-Control-Allow-Methods": "POST"
               },
             }
           )
