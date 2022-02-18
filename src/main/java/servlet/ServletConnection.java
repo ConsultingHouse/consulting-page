@@ -23,11 +23,10 @@ public class ServletConnection extends APIHandler {
         
         JSONObject returnData = new JSONObject();
         // if(inputData.get("Key") == System.getenv("KEYMD5")){
+            // https://consultinghouse.my.salesforce.com/secur/frontdoor.jsp?sid=00Dj0000000I9Kp!AQsAQAPEOEOHhNQOl__LVv8CdzHZmwV1P9C8_DPT27pfo27OnYAczde6lvWZ2fYzi9ZUOOOFRQ0Chy8LFOmYlNNJjvzDTFT4&retURL=apex%2Fpage%3Fpageid=a0a5b00000USNm5AAH
             JSONObject returnInternalData = new JSONObject();
             String urlVar = System.getenv("URL")+
-                            "?un="+System.getenv("Username")+
-                            "&pw="+System.getenv("Password")+
-                            "&startURL="+System.getenv("startURL");
+                            "&retURL="+System.getenv("startURL");
             
             returnInternalData.put("urlLogin", urlVar);            
             returnData.put("objectData", returnInternalData);
