@@ -7,22 +7,6 @@
       var c = this;
       c.callPageGet = function () {
         debugger;
-        $http
-          .post(
-            "https://login.salesforce.com/services/oauth2/token?grant_type=password&client_id=3MVG9fMtCkV6eLhcqBaBXrA9owsyJlOKzhkHOMJ2Hy03gGkORmdXe.dgcFyIDd9Jwk_CmRKMeMd8u_NNLH0rW&client_secret=8611131FB3842F1008E402C43EF5F1BDE0EEC5614921189A340BFEE78D481EBC&password=AlphaCloud9fVBnxv3M4mndUufSA151Sd5p&username=relacionamento9@consultinghouse.com.br",
-            {},
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                "Access-Control-Allow-Origin": "https://consulting-page.herokuapp.com",
-                "Access-Control-Allow-Credentials": true,
-                "Access-Control-Allow-Methods": "POST"
-              },
-            }
-          )
-          .then(
-            function successCallback(responseOauth) {
               $http
                 .get(
                   "https://consulting-page.herokuapp.com/connection",
@@ -34,19 +18,14 @@
                 )
                 .then(
                   function successCallback(response) {
-                    c.handleGET(response, responseOauth);
+                    c.handleGET(response);
                   },
                   function errorCallback(response) {
                     console.log(response);
                   }
                 );
-            },
-            function errorCallback(response) {
-              console.log(response);
-            }
-          );
       };
-      c.handleGET = function (response, responseOauth) {
+      c.handleGET = function (response) {
         /*if (!c.isIOS()){
           document.getElementById("myIframe").src =
             response.data.objectData.urlLogin.replace(
@@ -57,7 +36,7 @@
           debugger;
           window.location.href = response.data.objectData.urlLogin
             .replace("%3Fpageid=", encodeURIComponent(window.location.search))
-            .replace("{{accessToken}}", responseOauth.data.access_token);
+            .replace("{{accessToken}}", response.data.objectData.access_token);
         // }
       };
       c.init = function () {

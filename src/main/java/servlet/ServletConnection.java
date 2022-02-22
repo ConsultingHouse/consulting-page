@@ -6,10 +6,13 @@ import servlet.system.APIHandler;
 import servlet.core.AppException;
 import servlet.core.AppUtils;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import org.json.simple.JSONObject;
 @WebServlet(
         name = "ServletConnection", 
@@ -28,9 +31,17 @@ public class ServletConnection extends APIHandler {
             String urlVar = System.getenv("URL")+
                             "&retURL="+System.getenv("startURL");
             
-            returnInternalData.put("urlLogin", urlVar);            
-            returnData.put("objectData", returnInternalData);
+            returnInternalData.put("urlLogin", urlVar);       
+
+            ResultSet rs = this.executeQuery("SELECT Token__c FROM salesforce.SessionData__c ");
+
+            if (!rs.next()) {
+                throw new AppException("Missing parameters", "APIGetTermoUso.execute");
+            }
+
+            returnInternalData.put("access_token", rs.getString("Token__c"));
         // }
+        returnData.put("objectData", returnInternalData);
         returnData.put("statusCode", "200");
         return returnData;
     }
